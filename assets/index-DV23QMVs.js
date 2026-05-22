@@ -31987,8 +31987,8 @@ function kj(e) {
 const Fb = {
   checkoutUrl: "URL_CHECKOUT_AQUI",
   basePriceUsd: 17.9,
-  videoEmbed: `<style>.wistia_responsive_wrapper { position: relative; width: 320px; max-width: 100%; padding-top: 133.33%; margin: 0 auto; } .wistia_responsive_wrapper wistia-player { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class="wistia_responsive_wrapper"><wistia-player media-id="rxw8235j2e"></wistia-player></div>`,
-  vturbOptimize: "",
+  videoEmbed: `<vturb-smartplayer id="vid-6a10b98285b1cc4da43f3c54" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/players/6a10b98285b1cc4da43f3c54/v4/player.js", s.async=!0,document.head.appendChild(s); </script>`,
+  vturbOptimize: `<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>\n<link rel="preload" href="https://scripts.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/players/6a10b98285b1cc4da43f3c54/v4/player.js" as="script">\n<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">\n<link rel="preload" href="https://cdn.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/6a10b9799435c3597d5c8449/main.m3u8" as="fetch">\n<link rel="dns-prefetch" href="https://cdn.converteai.net">\n<link rel="dns-prefetch" href="https://scripts.converteai.net">\n<link rel="dns-prefetch" href="https://images.converteai.net">\n<link rel="dns-prefetch" href="https://license.vturb.com">`,
   customHead: "",
   customBody: "",
   customFooter: "",
@@ -32182,6 +32182,20 @@ const Bb = ({ answers: e, onCheckout: t }) => {
       const timer = setTimeout(() => setShowBtn(!0), 640000);
       return () => clearTimeout(timer);
     }, []),
+    x.useEffect(() => {
+      if (!f.current || !o) return;
+      const h = o.match(/src="([^"]+player\.js)"/);
+      if (!h) return;
+      const g = document.createElement("script");
+      return (
+        (g.src = h[1]),
+        (g.async = !0),
+        document.head.appendChild(g),
+        () => {
+          g.remove();
+        }
+      );
+    }, [o]),
     b.jsxs("div", {
       className: "flex flex-col items-center px-6 pt-10 pb-8 text-center",
       children: [
