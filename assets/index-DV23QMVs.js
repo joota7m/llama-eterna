@@ -31987,8 +31987,8 @@ function kj(e) {
 const Fb = {
   checkoutUrl: "URL_CHECKOUT_AQUI",
   basePriceUsd: 17.9,
-  videoEmbed: "",
-  vturbOptimize: "",
+  videoEmbed: "<vturb-smartplayer id=\"vid-69e1026a750b24d3132ce961\" style=\"display: block; margin: 0 auto; width: 100%; max-width: 400px;\"></vturb-smartplayer> <script type=\"text/javascript\"> var s=document.createElement(\"script\"); s.src=\"https://scripts.converteai.net/31957ec3-9250-4adb-93eb-bb2b4086c66f/players/69e1026a750b24d3132ce961/v4/player.js\", s.async=!0,document.head.appendChild(s); </script>",
+  vturbOptimize: "<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>\n<link rel=\"preload\" href=\"https://scripts.converteai.net/31957ec3-9250-4adb-93eb-bb2b4086c66f/players/69e1026a750b24d3132ce961/v4/player.js\" as=\"script\">\n<link rel=\"preload\" href=\"https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js\" as=\"script\">\n<link rel=\"preload\" href=\"https://cdn.converteai.net/31957ec3-9250-4adb-93eb-bb2b4086c66f/69bc5bdaacddada823a9149b/main.m3u8\" as=\"fetch\">\n<link rel=\"dns-prefetch\" href=\"https://cdn.converteai.net\">\n<link rel=\"dns-prefetch\" href=\"https://scripts.converteai.net\">\n<link rel=\"dns-prefetch\" href=\"https://images.converteai.net\">\n<link rel=\"dns-prefetch\" href=\"https://api.vturb.com.br\">",
   customHead: "",
   customBody: "",
   customFooter: "",
