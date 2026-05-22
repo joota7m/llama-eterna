@@ -31987,8 +31987,8 @@ function kj(e) {
 const Fb = {
   checkoutUrl: "URL_CHECKOUT_AQUI",
   basePriceUsd: 17.9,
-  videoEmbed: "<vturb-smartplayer id=\"vid-69e1026a750b24d3132ce961\" style=\"display: block; margin: 0 auto; width: 100%; max-width: 400px;\"></vturb-smartplayer> <script type=\"text/javascript\"> var s=document.createElement(\"script\"); s.src=\"https://scripts.converteai.net/31957ec3-9250-4adb-93eb-bb2b4086c66f/players/69e1026a750b24d3132ce961/v4/player.js\", s.async=!0,document.head.appendChild(s); </script>",
-  vturbOptimize: "<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>\n<link rel=\"preload\" href=\"https://scripts.converteai.net/31957ec3-9250-4adb-93eb-bb2b4086c66f/players/69e1026a750b24d3132ce961/v4/player.js\" as=\"script\">\n<link rel=\"preload\" href=\"https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js\" as=\"script\">\n<link rel=\"preload\" href=\"https://cdn.converteai.net/31957ec3-9250-4adb-93eb-bb2b4086c66f/69bc5bdaacddada823a9149b/main.m3u8\" as=\"fetch\">\n<link rel=\"dns-prefetch\" href=\"https://cdn.converteai.net\">\n<link rel=\"dns-prefetch\" href=\"https://scripts.converteai.net\">\n<link rel=\"dns-prefetch\" href=\"https://images.converteai.net\">\n<link rel=\"dns-prefetch\" href=\"https://api.vturb.com.br\">",
+  videoEmbed: `<style>.wistia_responsive_wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .wistia_responsive_wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }</style><div class="wistia_responsive_wrapper"><iframe allowtransparency="true" title="Wistia video player" allowfullscreen scrolling="no" class="wistia_embed" src="https://fast.wistia.net/embed/iframe/rxw8235j2e"></iframe></div>`,
+  vturbOptimize: "",
   customHead: "",
   customBody: "",
   customFooter: "",
@@ -32175,23 +32175,13 @@ const Bb = ({ answers: e, onCheckout: t }) => {
     r = (e == null ? void 0 : e[9]) || "él",
     { checkoutUrl: s, basePriceUsd: i, videoEmbed: o, loading: a } = Pc(),
     { symbol: l, price: c, originalPrice: d, loading: u } = kj(a ? void 0 : i),
-    f = x.useRef(null);
+    f = x.useRef(null),
+    [showBtn, setShowBtn] = x.useState(!1);
   return (
     x.useEffect(() => {
-      if (!f.current || !o) return;
-      const h = o.match(/id="vid-([a-f0-9]+)"/);
-      if (!h) return;
-      const v = h[1],
-        g = document.createElement("script");
-      return (
-        (g.src = `https://scripts.converteai.net/31957ec3-9250-4adb-93eb-bb2b4086c66f/players/${v}/v4/player.js`),
-        (g.async = !0),
-        document.head.appendChild(g),
-        () => {
-          g.remove();
-        }
-      );
-    }, [o]),
+      const timer = setTimeout(() => setShowBtn(!0), 640000);
+      return () => clearTimeout(timer);
+    }, []),
     b.jsxs("div", {
       className: "flex flex-col items-center px-6 pt-10 pb-8 text-center",
       children: [
@@ -32253,14 +32243,15 @@ const Bb = ({ answers: e, onCheckout: t }) => {
             className: "w-full mb-8",
             children: b.jsx("div", { dangerouslySetInnerHTML: { __html: o } }),
           }),
-        b.jsx(zb, {
-          symbol: l,
-          price: c,
-          originalPrice: d,
-          loading: u || a,
-          checkoutUrl: s,
-          onCheckout: t,
-        }),
+        showBtn &&
+          b.jsx(zb, {
+            symbol: l,
+            price: c,
+            originalPrice: d,
+            loading: u || a,
+            checkoutUrl: s,
+            onCheckout: t,
+          }),
       ],
     })
   );
