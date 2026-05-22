@@ -31987,7 +31987,7 @@ function kj(e) {
 const Fb = {
   checkoutUrl: "URL_CHECKOUT_AQUI",
   basePriceUsd: 17.9,
-  videoEmbed: `<style>.wistia_responsive_wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .wistia_responsive_wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }</style><div class="wistia_responsive_wrapper"><iframe allowtransparency="true" title="Wistia video player" allowfullscreen scrolling="no" class="wistia_embed" src="https://fast.wistia.net/embed/iframe/rxw8235j2e"></iframe></div>`,
+  videoEmbed: `<style>.wistia_responsive_wrapper { position: relative; width: 320px; max-width: 100%; padding-top: 75%; margin: 0 auto; } .wistia_responsive_wrapper wistia-player { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class="wistia_responsive_wrapper"><wistia-player media-id="rxw8235j2e"></wistia-player></div>`,
   vturbOptimize: "",
   customHead: "",
   customBody: "",
