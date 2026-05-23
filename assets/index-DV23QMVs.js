@@ -31985,7 +31985,7 @@ function kj(e) {
   );
 }
 const Fb = {
-  checkoutUrl: "URL_CHECKOUT_AQUI",
+  checkoutUrl: "https://pay.hotmart.com/R105960913E?checkoutMode=10",
   basePriceUsd: 17.9,
   videoEmbed: `<vturb-smartplayer id="vid-6a10b98285b1cc4da43f3c54" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/players/6a10b98285b1cc4da43f3c54/v4/player.js", s.async=!0,document.head.appendChild(s); </script>`,
   vturbOptimize: `<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>\n<link rel="preload" href="https://scripts.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/players/6a10b98285b1cc4da43f3c54/v4/player.js" as="script">\n<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">\n<link rel="preload" href="https://cdn.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/6a10b9799435c3597d5c8449/main.m3u8" as="fetch">\n<link rel="dns-prefetch" href="https://cdn.converteai.net">\n<link rel="dns-prefetch" href="https://scripts.converteai.net">\n<link rel="dns-prefetch" href="https://images.converteai.net">\n<link rel="dns-prefetch" href="https://license.vturb.com">`,
